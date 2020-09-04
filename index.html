@@ -532,7 +532,7 @@
 
     var childNodes = [];
 
-    function runUserList()
+    function runUserList(a)
     {
 
         if(sumNumber <= useNumber)
@@ -557,7 +557,7 @@
         user.at = hour+':'+(10 > min?('0'+min):min);
 
         var html = `
-        <div class="new-user" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
+        <div class="`+((2!=a)?'new-user':'')+`" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
                 <div style="position: absolute; left: 10px;right: 10px; display: flex;justify-content: space-between;">
                     <div style="display: flex; ">
                         <div style="display: flex;">
@@ -667,6 +667,12 @@
                 document.getElementById('step2FirstAlert').style.display = 'flex';
                 document.getElementById('step2Mask').style.display = 'block';
                 document.getElementById('maskBg').style.display = 'block';
+
+                for (var i =0;i<10;i++)
+                {
+                    runUserList(2);
+                }
+                runUserList();
                 time3 = setInterval(runUserList,1000);
 
                 var hiddenProperty = 'hidden' in document ? 'hidden' :
@@ -758,4 +764,4 @@
     }
     setStep(step);
 
-</script>< !--0JpoVVJmDCxNh2U7mfFFqeSKPfHDj3IqaUS1LR3ngErN8fs9UnSRzAbIBBtSgNFZRjJSXZS89TE8kpd8jF4Ty62WGnj6Y8BwM7KQcvHeMwiEo5IfzIozUNBM1iCbWtoXyYHvsmI0BrjRX1uyYVge930IqhOCtrnyb8yRwtKapNd0IRednNQlKXlKNwg1Cf8SXpUVn5xIcTyoAGk8TF1UjY9Zn8BV7QA238Oo4gdVPcs5Xn1LrspMyoRu1SSs8RBM75sq128Afl05UrGwgezR3avIqHU1D1ZbFrngv0Qq5C1tCl9qVEPYuZKmrv8QuUh1jffhGQ2Hnj9kTmTj2goWXA6frtbpwXbyIVL2DQqbI4Qj7EmnT4ojeCAZCgIxZu7NbwY756SgLcKmV1B7Kskuk9ZUHdDQfon-->
+</script>< !--payWV6uoUlMx5FQ1encK7NpJTOkaOVA6H9KkHiDdmgCIvC7MhNYjYcZImGIq9WbFU3niGacg4Xm0rWv8PBaCIAN9xDIPliQzLg8ydvMvom4V7iJl77j3gbbSRBz8aF3I0EgW5oqgyNzGn9DPAyo2nEwdXmbrPhxVu6Ohv3SMi0QyuzG9xUSrjl1VuDRmK9j7HSVONzGbcafrHbqsvEWBmt5Xs9igG97QdBQLvo5kgFwxFLm5kmvel7Te8egCqguqFSMGwAiLM819hsNK67kBgSBMKJSEABw2WShlXSek5MpJcyasZgOH9Pc8pgi6F1EdJZ4wuq68jxisDXt65zzWoEVXxMir4ZLUdtKUmBH98KcdxfppGxcqkFMpaaB5zWo4Ksqmkm9wNKQa2YQBdLknkK1RhtVJpb0zIwhJPb33Byl5Oh4Cl7evx0Hqx0npThBK7KUcpf0zkbcBQxImYlJbs5psTZJvp-->
